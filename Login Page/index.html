@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shortify | Login Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="images/Shortiyfy logo.PNG" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/386a515bcf.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+    <nav>
+        <a href="#" id="goBack">Back to SHORTIFY</a>
+    </nav>
+    <main>
+        <h1>Login</h1>
+        <div>
+            <input type="text" name="username" id="username" placeholder="Username" required>
+            <input type="password" name="password" id="password" placeholder="Password" required>
+            <a href="">Forgot Password?</a>
+            <button type="submit" id="loginButton">Login</button>
+            <p class="successfulMessage" id="successfulMessage"></p>
+            <p>Not a member? <a href="signup/index.html">Sign Up</a></p>
+        </div>
+    </main>
+</body>
+<script>
+    document.getElementById("goBack").addEventListener("click", function(goBack) {
+        goBack.preventDefault(); 
+        history.back();
+    });
+
+        const message1 = document.getElementById("successfulMessage");
+    
+    document.getElementById("loginButton").addEventListener("click", function(successfulMessage) {
+        message1.textContent = "Login Successfull. Return to the Home Page";
+        message1.style.color = "green";
+    })
+
+</script>
+</html>

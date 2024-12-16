@@ -1,0 +1,245 @@
+
+@font-face {
+    font-family: font;
+    src: url(fonts/HankenGrotesk-Regular.ttf);
+}
+
+@font-face {
+    font-family: fonts;
+    src: url(fonts/HankenGrotesk-Bold.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(images/_fhdtexture113.jpg);
+    display: flex;
+    flex-direction: column;
+    font-family: font;
+}
+
+nav{
+    background-color: #08121d;
+    padding: 15px;
+    border-bottom: 2px solid blue;
+    display: flex;
+    gap: 10%;
+    align-items: center;
+    justify-content: space-around;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    opacity: 0.8;
+}
+
+nav h2{
+    font-family: cursive;
+    transition: 0.5s ease;
+    position: relative;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+nav h2:hover{
+    cursor: pointer;
+    transform: scale(1.15);
+}
+
+nav h2 a{
+    text-decoration: none;
+    color: rgb(18, 18, 234);
+}
+
+.navDiv{
+    display: flex;
+    align-items: center;
+    gap: 100px;
+}
+
+
+nav h1{
+    margin-left: 20px;
+    color: white;
+}
+
+.developers{
+    display: flex;
+    gap: 40px;
+    color: rgb(184, 177, 177);
+}
+
+.container{
+    display: flex;
+    width: 100%;
+    align-self: center;
+}
+
+main{
+    background-color: rgb(22, 22, 22);
+    color: white;
+    padding: 40px;
+    margin-top: 80px;
+    border: 2px solid transparent;
+    /* border-radius: 10px; */
+    width: 28%;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    text-align: center;
+}
+
+main:hover{
+    animation-name: colorchange;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    border: 4px solid rgb(128, 0, 77);
+    transition: 0.8s;
+    color: deeppink;
+}
+
+@keyframes colorchange{
+    0%{box-shadow: red 15px 15px 7rem solid;}
+    20%{box-shadow: rgb(55, 255, 0) 15px 15px 7rem ;}
+    40%{box-shadow: rgb(0, 60, 255) 15px 15px 7rem ;}
+    60%{box-shadow: rgb(255, 199, 17) 15px 15px 7rem ;}
+    100%{box-shadow: rgb(255, 0, 149) 15px 15px 7rem ;}
+}
+
+.photo{
+    width: 100%;
+}
+
+#photo{
+    max-width: 100%;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+}
+
+#name{
+    font-family: fonts;
+    font-size: 20px;
+}
+
+#name:hover{
+    color: rgb(19, 170, 19);
+    transition: 2s;
+}
+
+#nme:hover{
+    color: rgb(19, 170, 19);
+    transition: 2s;
+}
+    
+.name{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+ul{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+ul button{
+    border: 2px solid rgb(42, 40, 40);
+    height: 45px;
+    width: 90%;
+    border-radius: 8px;
+}
+
+ul button:hover{
+    border: 2px solid;
+    background-color: rgb(23, 23, 23);
+    color: white;
+    cursor: pointer;
+    transition: 0.7s ease;
+}
+
+footer{
+    margin-top: 30px;
+    /* border: 1px solid black; */
+}
+
+footer div{
+    margin: 0px auto;
+    text-align: center;
+    padding: 5px;
+    background-color: #08121d;
+    /* border: 1px solid red; */
+}
+
+footer div p{
+    font-weight: 400;
+}
+
+.footerP{
+    color: white;
+}
+
+.footer-links a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 2px;
+    
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 680px) {
+    html, body {
+        overflow-x: hidden;
+      }      
+
+    nav {
+        position: relative;
+        display: flex;
+        padding: 7px;
+        width: 100%;  
+    }
+
+    nav h2{
+        font-size: 20px;
+        margin-left: 10px;
+    }
+
+    .salutation{
+        width: 400px;
+        display: flex;
+        float: right;
+        text-align: right;
+        align-items: center;
+    }
+
+    .salutation h1{
+        font-size: 15px;    
+    }
+
+    .developers h3{
+        display: none;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    main {
+        width: 95%;
+        margin: 20px auto 0;
+    }
+
+    ul button {
+        width: 100%;
+    }
+}
